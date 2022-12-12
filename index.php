@@ -1,6 +1,6 @@
 <?php
 
-$paragraph = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quo voluptates voluptatem possimus quae ex praesentium consequuntur, voluptatum modi! Quisquam, beatae consequuntur aliquam aut minima enim culpa quos sapiente aperiam?'
+$p = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quo voluptates voluptatem possimus quae ex praesentium consequuntur, voluptatum modi! Quisquam, beatae consequuntur aliquam aut minima enim culpa quos sapiente aperiam?'
 
 ?>
 
@@ -13,6 +13,7 @@ $paragraph = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit 
     <title>Bad Words</title>
 </head>
 <body>
-    <p><?php echo $paragraph ?></p>
+    <p><?php echo $p ?></p>
+    <h4>la lunghezza del paragrafo è di <?php echo strlen($p) ?> caratteri</h4>
 </body>
 </html>
