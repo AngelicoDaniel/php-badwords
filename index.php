@@ -1,6 +1,13 @@
 <?php
 
-$p = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quo voluptates voluptatem possimus quae ex praesentium consequuntur, voluptatum modi! Quisquam, beatae consequuntur aliquam aut minima enim culpa quos sapiente aperiam?'
+$p = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quo voluptates voluptatem possimus quae ex praesentium consequuntur, voluptatum modi! Quisquam, beatae consequuntur aliquam aut minima enim culpa quos sapiente aperiam?';
+
+$badWord = $_GET['badWord'];
+
+$censoredP = str_replace( $badWord, '***', $p );
+
+var_dump($badWord);
+var_dump($censoredP)
 
 ?>
 
@@ -15,5 +22,15 @@ $p = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quo volu
 <body>
     <p><?php echo $p ?></p>
     <h4>la lunghezza del paragrafo è di <?php echo strlen($p) ?> caratteri</h4>
+
+    <form action="" method="GET">
+        <div>
+            <label for="name">Bad Words</label>
+            <input type="text" name="badWord">
+        </div>
+        <button type="submit">INVIO</button>
+    </form>
+
+    <h1><?php echo $censoredP ?></h1>
 </body>
 </html>
