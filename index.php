@@ -6,8 +6,8 @@ $badWord = $_GET['badWord'];
 
 $censoredP = str_replace( $badWord, '***', $p );
 
-var_dump($badWord);
-var_dump($censoredP)
+// var_dump($badWord);
+// var_dump($censoredP)
 
 ?>
 
@@ -32,5 +32,6 @@ var_dump($censoredP)
     </form>
 
     <h1><?php echo $censoredP ?></h1>
+    <h2>la lunghezza del paragrafo è di <?php echo strlen($censoredP) ?> caratteri</h2>
 </body>
 </html>
